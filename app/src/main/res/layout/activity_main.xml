@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.CollapsingToolbarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:id="@+id/floatingButtonId"
+        android:backgroundTint="@color/purple_200"
+        android:src="@drawable/ic_baseline_qr_code_scanner_24"
+        android:layout_margin="20dp"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:hint="Search Contacts &amp; Numbers"
+                    android:padding="10dp"
+                    android:drawableStart="@drawable/ic_baseline_search_24"
+                    android:queryHint="Search contacts and numbers"
+                    android:id="@+id/searchBarId"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="10"
+                    android:textSize="15dp"
+                    android:iconifiedByDefault="false"
+                    android:background="@drawable/search_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp">
+
+                </EditText>
+
+                <Button
+                    android:id="@+id/shareButtonId"
+                    android:layout_gravity="center|left"
+                    android:background="@drawable/ic_baseline_share_24"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_margin="18dp"
+                    android:id="@+id/createNewContactId"
+                    android:layout_width="206dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/group2">
+
+                </Button>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:overScrollMode="never"
+                android:id="@+id/recyclerViewId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</com.google.android.material.appbar.CollapsingToolbarLayout>
